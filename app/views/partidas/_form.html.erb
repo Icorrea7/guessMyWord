@@ -1,0 +1,34 @@
+
+<%= form_with(model: partida, local: true) do |form| %>
+  <% if partida.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(partida.errors.count, "error") %> prohibited this partida from being saved:</h2>
+
+      <ul>
+      <% partida.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+  <div class="form-group">
+    <%= form.label :player_number %>
+    <%= form.number_field :player_number , :class => "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :words_number %>
+    <%= form.number_field :words_number , :class => "form-control"  %>
+  </div>
+
+  <div class="field">
+    <%= form.label :game_time %>
+    <%= form.text_field :game_time , :class => "form-control"  %>
+  </div>
+
+  <div class="actions btn">
+    <%= form.submit %>
+  </div>
+<% end %>

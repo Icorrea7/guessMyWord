@@ -1,0 +1,24 @@
+# == Schema Information
+#
+# Table name: partidas
+#
+#  id            :integer          not null, primary key
+#  code          :integer
+#  game_time     :decimal(, )
+#  player_number :integer
+#  words_number  :integer
+#  created_at    :datetime         not null
+#  updated_at    :datetime         not null
+#
+
+one:
+  code: 1
+  player_number: 1
+  words_number: 1
+  game_time: 9.99
+
+two:
+  code: 1
+  player_number: 1
+  words_number: 1
+  game_time: 9.99

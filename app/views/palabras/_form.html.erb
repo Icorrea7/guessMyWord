@@ -1,0 +1,19 @@
+
+<%= form_for @palabra, url: partida_palabras_path(@partida) do |form| %>
+  <% if @palabra.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@palabra.errors.count, "error") %> prohibited this partida from being saved:</h2>
+
+      <ul>
+      <% @palabra.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <%= form.text_area :word, placeholder:"Agregar palabra"%>
+<%= form.hidden_field  :partida_id %>
+  <div class="actions btn">
+    <%= form.submit %>
+  </div>
+<% end %>
